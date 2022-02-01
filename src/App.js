@@ -7,10 +7,11 @@ import FriendList from "./Components/FriendList/FriendList.jsx";
 import friends from "./data/friends.json";
 import transactions from "./data/transactions.json";
 import TransactionHistory from "./Components/TransactionHistory/TransactionHistory.jsx";
+import { ContainerStyled } from "./Components/Shared/Container.styled";
 
 function App() {
   return (
-    <>
+    <ContainerStyled>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -20,8 +21,8 @@ function App() {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />;
-    </>
+      <TransactionHistory items={transactions} />
+    </ContainerStyled>
   );
 }
 
