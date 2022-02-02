@@ -20,8 +20,6 @@ const Statistics = (props) => {
 export default Statistics;
 
 Statistics.propTypes = {
-  props: PropTypes.shape({
-    stats: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
-  }),
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+  title: PropTypes.string.isRequired,
 };
