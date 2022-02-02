@@ -1,6 +1,7 @@
 import "../../data/data.json";
 import StatisticsItem from "./StatisticsItem";
 import s from "./Statistics.module.css";
+import PropTypes from "prop-types";
 
 const Statistics = (props) => {
   const { title, stats } = props;
@@ -17,3 +18,10 @@ const Statistics = (props) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  props: PropTypes.shape({
+    stats: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
+};
