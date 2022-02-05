@@ -1,6 +1,7 @@
 import "../../data/friends.json";
 import FriendListItem from "../FriendList/FriendListItem";
 import s from "./FriendList.module.css";
+import PropTypes from "prop-types";
 
 const FriendsList = ({ friends }) => {
   return (
@@ -13,3 +14,10 @@ const FriendsList = ({ friends }) => {
 };
 
 export default FriendsList;
+
+// FriendsList.propTypes = {
+//   friends: PropTypes.arrayOf({
+//     // el: PropTypes.array.isRequired,
+//     id: PropTypes.number.isRequired,
+//   }),
+// };
